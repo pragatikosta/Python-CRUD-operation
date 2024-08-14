@@ -1,11 +1,9 @@
 from django.db import models
 
 # Create your models here.
-class student(models.model):
-    name=models.CharField(max_Length=200)
-    college=models.CharField(max_Length=200)
-    age=models.IntergerField(max_Length=10)
-    is_active=models.BooleanField(default=False)
-    
-
-
+class Student(models.Model):
+    name = models.CharField(max_length=200)  # Corrected 'max_Length' to 'max_length'
+    college = models.CharField(max_length=200)  # Corrected 'max_Length' to 'max_length'
+    age = models.IntegerField()  # Removed 'max_length' as it's not applicable for IntegerField
+    is_active = models.BooleanField(default=False)
+ 
